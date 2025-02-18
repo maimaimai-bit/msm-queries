@@ -1,0 +1,15 @@
+<h1>List of all directors</h1>
+
+<hr>
+
+<% @list_of_directors.order({ :dob => :desc }).each do |a_director| %>
+  <div>
+    <%= a_director.name %>
+
+    <a href="/directors/<%= a_director.id %>">
+      Show details
+    </a>
+  </div>
+
+  <hr>
+<% end %>

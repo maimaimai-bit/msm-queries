@@ -1,0 +1,15 @@
+<h1>List of all actors</h1>
+
+<hr>
+
+<% @list_of_actors.each do |an_actor| %>
+  <div>
+    <%= an_actor.name %>
+
+    <a href="/actors/<%= an_actor.id %>">
+      Show details
+    </a>
+  </div>
+
+  <hr>
+<% end %>

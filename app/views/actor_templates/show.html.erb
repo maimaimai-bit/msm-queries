@@ -1,0 +1,20 @@
+<h1><%= @the_actor.name %></h1>
+
+<dl>
+  <dt>Date of birth</dt>
+  <dd><%= @the_actor.dob %></dd>
+
+  <dt>Characters</dt>
+  <dd>
+    <% @the_actor.characters.each do |a_character| %>
+      <div><%= a_character.name %></div>
+    <% end %>
+  </dd>
+
+  <dt>Directors worked with</dt>
+  <dd>
+    <% @the_actor.characters.map { |char| char.movie.director }.uniq.each do |director| %>
+      <div><%= director.name %></div>
+    <% end %>
+  </dd>
+</dl>
