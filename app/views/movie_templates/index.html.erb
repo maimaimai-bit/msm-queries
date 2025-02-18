@@ -1,0 +1,15 @@
+<h1>List of all movies</h1>
+
+<hr>
+
+<% @list_of_movies.each do |a_movie| %>
+  <div>
+    <%= a_movie.title %> - <%= a_movie.director.name %>
+
+    <a href="/movies/<%= a_movie.id %>">
+      Show details
+    </a>
+  </div>
+
+  <hr>
+<% end %>
